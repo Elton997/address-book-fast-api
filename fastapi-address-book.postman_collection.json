@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "acab7eff-ea6c-43ac-a6e4-3051f5daa848",
+		"name": "fastapi-address-book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11938627"
+	},
+	"item": [
+		{
+			"name": "Get Address",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/get_addresses?latitude=18&longitude=20&distance=5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get_addresses"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "18"
+						},
+						{
+							"key": "longitude",
+							"value": "20"
+						},
+						{
+							"key": "distance",
+							"value": "5000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"street\": \"Naigaon\",\r\n\"city\": \"Mumbai\",\r\n\"state\": \"Maharashtra\",\r\n\"zip_code\": \"401211\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/addresses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Address",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"street\": \"Bhuigaon\",\r\n\"city\": \"Mumbai\",\r\n\"state\": \"Maharashtra\",\r\n\"zip_code\": \"401209\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/addresses/34",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"addresses",
+						"34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Address",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/addresses/35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"addresses",
+						"35"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
