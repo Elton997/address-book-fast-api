@@ -15,11 +15,6 @@ The following dependencies are required to run the application:
 git clone https://github.com/Elton997/address-book-fast-api.git
 ```
 
-To install the dependencies, run the following command:
-```
-pip install fastapi pydantic geopy
-```
-
 ## Usage
 Create Virtual Environment in Python to run the FastAPI:
 
@@ -27,14 +22,17 @@ Create Virtual Environment in Python to run the FastAPI:
 ```
 python -m venv .venv
 .venv\Scripts\activate.bat 
-pip install uvicorn
 ```
 
 (For MAC or Linux Users)
 ```
 python -m venv .venv
 source venv/bin/activate
-pip install uvicorn
+```
+
+To install the dependencies, run the following command:
+```
+pip install fastapi pydantic geopy uvicorn
 ```
 
 To start the API, run the following command:
